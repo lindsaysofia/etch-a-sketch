@@ -1,0 +1,1 @@
+Will be building an "etch-a-sketch". More description to follow as I go through the project.
