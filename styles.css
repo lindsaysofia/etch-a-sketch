@@ -1,5 +1,6 @@
 :root {
   --dimension: 500px;
+  --size: 16;
 }
 
 body {
@@ -11,8 +12,13 @@ body {
 
 #grid-container {
   margin-top: 2em;
-  border: 1px solid black;
   height: var(--dimension);
-  width: var(--dimension);
+  width: var(--dimension); 
+  display: grid;
+  grid-template-columns: repeat(var(--size), 1fr);
+}
+
+.grid-item {
+  border: 1px solid black;
 }
 
