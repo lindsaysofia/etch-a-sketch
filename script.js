@@ -28,8 +28,13 @@ function changeGridSize() {
   createGrid(newSize, container);
 }
 
+function getRandomHSL() {
+  return `hsla(${Math.floor(Math.random() * 360)}, 100%, 50%, 0.5)`;
+}
+
 function sketch(e) {
-  console.log(e.target.id);
+  let gridItem = e.target;
+  gridItem.style.backgroundColor = getRandomHSL();
 }
 
 
