@@ -3,6 +3,7 @@ const changeSizeButton = document.querySelector('button');
 const root = document.querySelector(':root');
 const size = 16;
 
+container.addEventListener('mouseover', sketch);
 changeSizeButton.addEventListener('click', changeGridSize);
 
 createGrid(size, container);
@@ -25,6 +26,10 @@ function changeGridSize() {
     newSize = (newSize === null) ? size : +newSize;
   } while (!Number.isInteger(newSize) || newSize <= 0 || newSize > 100);
   createGrid(newSize, container);
+}
+
+function sketch(e) {
+  console.log(e.target.id);
 }
 
 
