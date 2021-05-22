@@ -1,11 +1,13 @@
 const container = document.getElementById('grid-container');
-const changeSizeButton = document.querySelector('button');
+const changeSizeButton = document.querySelector('.change-size');
+const clearButton = document.querySelector('.clear');
 const fontIcons = document.querySelectorAll('.fas');
 const root = document.querySelector(':root');
-const size = 16;
+let size = 16;
 
 container.addEventListener('mouseover', sketch);
 changeSizeButton.addEventListener('click', changeGridSize);
+clearButton.addEventListener('click', () => createGrid(size, container));
 
 createGrid(size, container);
 
@@ -24,8 +26,11 @@ function changeGridSize() {
   let newSize;
   do {
     newSize = prompt('Enter an integer between 1 and 100', 16);
-    newSize = (newSize === null) ? size : +newSize;
+    // newSize = (newSize === null) ? size : +newSize;
+    if (newSize === null) return;
+    newSize = +newSize;
   } while (!Number.isInteger(newSize) || newSize <= 0 || newSize > 100);
+  size = newSize;
   createGrid(newSize, container);
 }
 

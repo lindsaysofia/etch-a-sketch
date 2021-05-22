@@ -53,5 +53,10 @@ button {
   width: 7em;
   height: 2em;
   font-size: 2em;
+  margin: 10px;
+}
+
+.clear {
+  color: red;
 }
 
