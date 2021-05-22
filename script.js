@@ -1,5 +1,6 @@
 const container = document.getElementById('grid-container');
 const changeSizeButton = document.querySelector('button');
+const fontIcons = document.querySelectorAll('.fas');
 const root = document.querySelector(':root');
 const size = 16;
 
@@ -29,12 +30,14 @@ function changeGridSize() {
 }
 
 function getRandomHSL() {
-  return `hsla(${Math.floor(Math.random() * 360)}, 100%, 50%, 0.5)`;
+  return `hsla(${Math.floor(Math.random() * 360)}, 100%, 60%, 0.7)`;
 }
 
 function sketch(e) {
   let gridItem = e.target;
-  gridItem.style.backgroundColor = getRandomHSL();
+  let newBackgroundColor = getRandomHSL();
+  gridItem.style.backgroundColor = newBackgroundColor;
+  fontIcons.forEach(icon => icon.style.color = newBackgroundColor);
 }
 
 

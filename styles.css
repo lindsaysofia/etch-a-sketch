@@ -1,6 +1,8 @@
 :root {
   --dimension: 500px;
   --size: 16;
+  --bg-color: black;
+  --main-color: gray;
 }
 
 body {
@@ -8,6 +10,28 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--bg-color);
+  color:var(--main-color);
+  line-height: 1.6;
+}
+
+body,
+button {
+  font-family: 'Cabin Sketch', cursive;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  padding: 0 1em;
+}
+
+.fas {
+  color: var(--main-color);
 }
 
 #grid-container {
@@ -18,7 +42,16 @@ body {
   grid-template-columns: repeat(var(--size), 1fr);
 }
 
-.grid-item {
-  border: 1px solid black;
+.grid-item,
+button {
+  border: 1px solid var(--main-color);
+}
+
+button {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  width: 7em;
+  height: 2em;
+  font-size: 2em;
 }
 
