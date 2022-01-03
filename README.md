@@ -1,1 +1,3 @@
-Will be building an "etch-a-sketch". More description to follow as I go through the project.
+# Etch-A-Sketch
+
+Live Demo Here: https://lindsaysofia.github.io/etch-a-sketch/
